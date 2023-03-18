@@ -76,7 +76,7 @@ namespace BookWebApi.Controllers
 
         [HttpPost]
         [Route("[action]")]
-        //[Authorize(Policy = PolicyService.Admin)]
+        [Authorize(Policy = PolicyService.Admin)]
         public async Task<ActionResult<string>> Create([FromBody] AcceptCreateBookDtoUI dto, CancellationToken token)
         {
             if (dto is null)
